@@ -9,3 +9,9 @@ ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
 # https://github.com/amix/vimrc.git
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+# copy dotfiles
+cp -r .config ~/.config
+cp .zshrc ~/.zshrc
+cp .vim_runtime/my_configs.vim ~/.vim_runtime/my_configs.vim
+cp .tmux.conf.local ~/.tmux.conf.local
