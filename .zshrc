@@ -134,5 +134,10 @@ export EDITOR=vim
 # Fix LC_* problems
 export LC_ALL=en_US.UTF-8
 
+# pnpm
+export PNPM_HOME="/home/codespace/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
 # start starship
 eval "$(starship init zsh)"
