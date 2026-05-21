@@ -9,6 +9,7 @@ ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
 # https://github.com/amix/vimrc.git
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
+mkdir -p ~/.vim_runtime/colors && curl -fsSL https://raw.githubusercontent.com/sonph/onehalf/master/vim/colors/onehalfdark.vim -o ~/.vim_runtime/colors/onehalfdark.vim && grep -qxF 'colorscheme onehalfdark' ~/.vim_runtime/my_configs.vim 2>/dev/null || printf '\ncolorscheme onehalfdark\n' >> ~/.vim_runtime/my_configs.vim
 
 # pnpm https://pnpm.io/installation
 curl -fsSL https://get.pnpm.io/install.sh | sh -
