@@ -295,6 +295,8 @@ bind ` send-prefix
 # move status line to top
 #set -g status-position top
 
-ln -f .tmux.conf.local ~/.tmux.conf.local
+# set true colors
+set -g default-terminal "tmux-256color"
+set -ga terminal-overrides ",*256col*:Tc"
 
 set-option -g default-shell /usr/bin/zsh
