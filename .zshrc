@@ -70,7 +70,7 @@ function _zshrc_load_starship {
 
 HISTFILE="${HISTFILE:-$HOME/.zsh_history}"
 HISTSIZE=50000
-SAVEHIST=10000
+SAVEHIST=50000
 
 setopt EXTENDED_HISTORY
 setopt SHARE_HISTORY
