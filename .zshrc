@@ -8,15 +8,8 @@
 # 0. Helpers
 # ============================================================
 
-typeset -U path
-
-function path_prepend {
-  [[ -d "$1" ]] && path=("$1" $path)
-}
-
-function path_append {
-  [[ -d "$1" ]] && path+=("$1")
-}
+# typeset -U path, path_prepend/path_append and PATH entries live in ~/.zshenv
+# so that non-interactive shells and scripts get the same environment.
 
 function _zshrc_bind_history_keys {
   if (( ! ${+widgets[history-search-multi-word]} )); then
@@ -115,10 +108,7 @@ fi
 # 2. Tool initialization
 # ============================================================
 
-path_prepend "$HOME/.local/bin"
-export PNPM_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/pnpm"
-path_prepend "$PNPM_HOME/bin"
-path_prepend "$HOME/.local/share/mise/shims"
+# PATH entries and exported environment live in ~/.zshenv.
 
 [[ -r /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
 

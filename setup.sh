@@ -107,6 +107,7 @@ install_pnpm() {
 install_dotfiles() {
   mkdir -p "$HOME/.config" "$HOME/.vim_runtime"
   cp -R "$DOTFILES_DIR/.config/." "$HOME/.config/"
+  cp "$DOTFILES_DIR/.zshenv" "$HOME/.zshenv"
   cp "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
   cp "$DOTFILES_DIR/.vim_runtime/my_configs.vim" "$HOME/.vim_runtime/my_configs.vim"
   cp "$DOTFILES_DIR/.tmux.conf.local" "$HOME/.tmux.conf.local"
