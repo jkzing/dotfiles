@@ -116,7 +116,8 @@ fi
 # ============================================================
 
 path_prepend "$HOME/.local/bin"
-path_prepend "${XDG_DATA_HOME:-$HOME/.local/share}/pnpm"
+export PNPM_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/pnpm"
+path_prepend "$PNPM_HOME/bin"
 path_prepend "$HOME/.local/share/mise/shims"
 
 [[ -r /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
